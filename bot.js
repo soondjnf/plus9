@@ -24,21 +24,21 @@ client.on('ready', function() {
                         if (!message.content.startsWith(prefix)) return;
                         var args = message.content.split(' ').slice(1);
                         var argresult = args.join(' ');
-                        if (message.author.id == 396958215377780747) return;
+                        if (message.author.id == 342626300021833728) return;
                        
                
                        
                
                        
                       if (message.content.startsWith(prefix + 'setname')) {
-                      if (message.author.id !== '453822868799750145') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+                      if (message.author.id !== '342626300021833728') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
                         client.user.setUsername(argresult).then
                             message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
                         return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
                       } else
                            
                       if (message.content.startsWith(prefix + 'setavatar')) {
-                      if (message.author.id !== '453822868799750145') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+                      if (message.author.id !== '342626300021833728') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
                       client.user.setAvatar(argresult);
                           message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
                       }
@@ -310,7 +310,7 @@ client.on('message', function(message) {
         if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('-lgd')){
-if (message.author.id !== '396958215377780747') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '342626300021833728') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
