@@ -9,7 +9,9 @@ const fs = require("fs");
 const moment = require("moment");  
 const { Client, Util } = require('discord.js');  
 const UserBlocked = new Set(); 
-const jimp = require('jimp');   
+const jimp = require('jimp');  
+ const pretty = require('pretty-ms') 
+ 
 ,ti={}  
 ,spee={};
        var prefix = "!" 
