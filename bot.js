@@ -2,7 +2,6 @@
 
 
 const Discord = require('discord.js');
-const db = require('quick.db');
 const Canvas = require('canvas');
 
 const client = new Discord.Client();   
@@ -11,11 +10,6 @@ const moment = require("moment");
 const { Client, Util } = require('discord.js');  
 const UserBlocked = new Set(); 
 const jimp = require('jimp');   
-const queue = new Map(); 
-const fetchVideoInfo = require('youtube-info');
-const sql = require("sqlite");
- const dateFormat = require('dateformat'); 
- const pretty = require('pretty-ms') 
 ,ti={}  
 ,spee={};
        var prefix = "!" 
