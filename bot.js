@@ -32,7 +32,7 @@ ${text}
 
  `) 
 
-   client.channels.get("471067377706991616").sendEmbed(embed);
+   client.channels.get("481529631875530765").sendEmbed(embed);
 client.send(` @everyone | @here `)
                   
                              
