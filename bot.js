@@ -19,8 +19,9 @@ client.on('ready', () => {
               message.channel.send(`تم نشر الكود`)
 
 
-
-   client.channels.get("481529631875530765").channel.send(`
+     const welcomer =  member.guild.channels.find('name', 'welcome');
+     if(!welcomer) return;
+welcomer.send(`                             
    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
 ${text} 
  
