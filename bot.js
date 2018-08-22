@@ -34,7 +34,7 @@ ${text}
 @everyone | @here 
 `)
 
-   bot.channels.get("481529631875530765").sendEmbed(embed);
+   client.channels.get("481529631875530765").sendEmbed(embed);
 
               })
             }
@@ -43,7 +43,6 @@ ${text}
 
 
 
-bot.login(process.env.BOT_TOKEN);
 
 client.on('message',async message => {
 let mention = message.mentions.members.first();
