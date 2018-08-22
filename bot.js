@@ -5,39 +5,45 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', async message => {
-  if(message.content.startsWith(prefix + "تقديم")) {
-    await message.channel.send("**:writing_hand: ارسل اللغة البرمجة الآن **").then(e => {
+  bot.on('message', async message => {
+  if(message.content.startsWith(prefix + "نشر")) {
+        if(!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send("⚠️|`انت لا تمتلك الرتبه المطلوبة`");  
+
+  await  message.channel.send(`اكتب الكود  الان`)
     let filter = m => m.author.id === message.author.id
-    let lan = '';
-    let md = '';
-    let br = '';
-    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-    .then(collected => {
-      lan = collected.first().content
-      collected.first().delete()
-e.edit(`**:ارسل مدة خبرتك الان**`)
-let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(co => {
-  md = co.first().content
-        co.first().delete()
-        e.edit(`**ارسل م تعرف بهذه اللغة الان**`)
-let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(col => {
-  br = col.first().content
-        col.first().delete()
-e.edit("**جاري التقديم علي طلبك...**").then(b => {
-        setTimeout(() => {
-  b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
-        },2000);
-let star = client.channels.get('474697535013781565');
-if(!star) return;
-if(star) {
-star.send({embed : new Discord.RichEmbed()
-.setDescription(`**اللغة البرمجية : \n ${lan}\n مدة ممارسة هذه اللغة :\n ${md} \nالخبرة  :\n ${br}  **`)  
-          .setFooter(`star.`)
-.setTimestamp()
-});
+      var text = '';
+        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+          .then(co => {
+            text = co.first().content
+
+              message.channel.send(`تم نشر الكود`)
+
+                var embed = new Discord.RichEmbed()
+                   .setColor(0x00AE86)
+                         .setAuthor(message.author.username, message.author.avatarURL)   
+    .setTimestamp()
+            .setDescription(`
+
+   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+${text} 
+ 
+   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+   
+  تم النشر بواسطة :<@${message.author.id}>
+
+@everyone | @here 
+`)
+
+   bot.channels.get("481529631875530765").sendEmbed(embed);
+
+              })
+            }
+          });
+
+
+
+
+bot.login(process.env.BOT_TOKEN);
 
 client.on('message',async message => {
 let mention = message.mentions.members.first();
