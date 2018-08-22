@@ -18,10 +18,11 @@ client.on('ready', () => {
 
               message.channel.send(`تم نشر الكود`)
 
-
-     const welcomer =  member.guild.channels.find('name', 'أكواد-جافا-سكربت');
-     if(!welcomer) return;
-welcomer.send(`                             
+                var embed = new Discord.RichEmbed()
+                   .setColor(0x00AE86)
+                         .setAuthor(message.author.username, message.author.avatarURL)   
+    .setTimestamp()
+            .setDescription(`
    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
 ${text} 
  
@@ -29,13 +30,17 @@ ${text}
    
   تم النشر بواسطة :<@${message.author.id}>
 
-@everyone | @here `)                              
+ `) 
+
+   client.channels.get("471067377706991616").sendEmbed(embed);
+client.send(` @everyone | @here `)
+                  
+                             
 
 
               })
             }
           });
-
 
 
 
