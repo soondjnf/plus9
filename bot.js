@@ -5,7 +5,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-  bot.on('message', async message => {
+  client.on('message', async message => {
   if(message.content.startsWith(prefix + "نشر")) {
         if(!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send("⚠️|`انت لا تمتلك الرتبه المطلوبة`");  
 
