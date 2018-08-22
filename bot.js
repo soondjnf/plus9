@@ -18,12 +18,9 @@ client.on('ready', () => {
 
               message.channel.send(`تم نشر الكود`)
 
-                var embed = new Discord.RichEmbed()
-                   .setColor(0x00AE86)
-                         .setAuthor(message.author.username, message.author.avatarURL)   
-    .setTimestamp()
-            .setDescription(`
 
+
+   client.channels.get("481529631875530765").channel.send(`
    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
 ${text} 
  
@@ -31,10 +28,8 @@ ${text}
    
   تم النشر بواسطة :<@${message.author.id}>
 
-@everyone | @here 
-`)
+@everyone | @here `)                              
 
-   client.channels.get("481529631875530765").sendEmbed(embed);
 
               })
             }
