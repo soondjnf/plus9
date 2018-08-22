@@ -30,10 +30,10 @@ e.edit("**جاري التقديم علي طلبك...**").then(b => {
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = message.guild.channels.find('name', 'التقديمات')
-if(!gg) return;
-if(gg) {
-gg.send({embed : new Discord.RichEmbed()
+let star = client.channels.get('474697535013781565');
+if(!star) return;
+if(star) {
+star.send({embed : new Discord.RichEmbed()
 .setDescription(`**اللغة البرمجية : \n ${lan}\n مدة ممارسة هذه اللغة :\n ${md} \nالخبرة  :\n ${br}  **`)  
           .setFooter(`star.`)
 .setTimestamp()
