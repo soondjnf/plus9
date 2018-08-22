@@ -19,7 +19,7 @@ client.on('ready', () => {
               message.channel.send(`تم نشر الكود`)
 
 
-     const welcomer =  member.guild.channels.find('name', 'welcome');
+     const welcomer =  member.guild.channels.find('name', 'أكواد-جافا-سكربت');
      if(!welcomer) return;
 welcomer.send(`                             
    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
