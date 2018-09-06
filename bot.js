@@ -8,13 +8,10 @@ console.log("Welcome Again !");
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
-╔╦╦╦═╦╗╔═╦═╦══╦═╗
-║║║║╩╣╚╣═╣║║║║║╩╣
-╚══╩═╩═╩═╩═╩╩╩╩═╝ 
-هذا الموقع يعطيك حسابات فورتنايت ماين كرافت سبوتفي وكل شي
-هذا الرابط
+افضل موقع بيديك ايديهات لاشهر الالعاب والمواقع 
+زى : Fortnite , Spotify , Netflix , uplay , Minecraft , Steam , More ...
          https://to.free-gg.com/pTXzMgd                    
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+${member} 
 **`)
 }).catch(console.error)
 })
@@ -27,13 +24,10 @@ console.log("Welcome Again !");
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
-╔╦╦╦═╦╗╔═╦═╦══╦═╗
-║║║║╩╣╚╣═╣║║║║║╩╣
-╚══╩═╩═╩═╩═╩╩╩╩═╝ 
-هذا الموقع يعطيك حسابات فورتنايت ماين كرافت سبوتفي وكل شي
-هذا الرابط
+افضل موقع بيديك ايديهات لاشهر الالعاب والمواقع 
+زى : Fortnite , Spotify , Netflix , uplay , Minecraft , Steam , More ...
          https://to.free-gg.com/pTXzMgd                    
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+${member} 
 **`)
 }).catch(console.error)
 })
